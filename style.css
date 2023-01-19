@@ -1,0 +1,53 @@
+/* Colors:
+skin: #fcecdd;
+peach: #ffc288;
+orange: #fea82f;
+heavy oj: #ff6701
+*/
+
+html {
+  font-size: 16px;
+  background: black;
+}
+body {
+  background: black;
+  margin: 0;
+  padding: 0;
+  overflow: 0;
+}
+.bck-container {
+  background: linear-gradient(
+    to top right,
+    black,
+    black,
+    black,
+    black,
+    black,
+    black,
+    rgb(172, 172, 172)
+  );
+  height: 95vh;
+  background-repeat: no-repeat;
+  zoom: 110%;
+  align-items: left;
+  background-size: contain;
+  justify-content: left;
+  animation: fadeIn 10s;
+  animation-fill-mode: backwards;
+}
+.hello {
+  font-size: 15vh;
+  font-weight: 900;
+  font-family: monospace;
+  text-align: center;
+  padding-top: 20rem;
+  color: #ff6701;
+  animation: jackInTheBox 1s;
+  --animate-repeat: 2;
+  cursor: pointer;
+}
+.info {
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
