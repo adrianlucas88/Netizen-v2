@@ -10,7 +10,7 @@ html {
   background: black;
 }
 body {
-  background: black;
+  background-color: black;
   margin: 0;
   padding: 0;
   overflow: 0;
@@ -22,21 +22,13 @@ body {
     black,
     black,
     black,
-    black,
-    black,
-    rgb(172, 172, 172)
+    rgb(59, 59, 59),
+    rgb(158, 158, 158)
   );
-  height: 95vh;
-  background-repeat: no-repeat;
-  zoom: 110%;
-  align-items: left;
-  background-size: contain;
-  justify-content: left;
-  animation: fadeIn 10s;
-  animation-fill-mode: backwards;
+  height: 100vh;
 }
 .hello {
-  font-size: 15vh;
+  font-size: 7rem;
   font-weight: 900;
   font-family: monospace;
   text-align: center;
@@ -47,7 +39,6 @@ body {
   cursor: pointer;
 }
 .info {
-  color: white;
   text-align: center;
-  cursor: pointer;
+  width: 100vw;
 }
