@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="height=device-height, width=device-width, initial-scale=1.0"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
@@ -12,32 +15,288 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-
     <title>Adrian Lucas</title>
   </head>
   <body class="bck-container">
-    <div class="container d-lg-flex">
-      <img class="d-lg-inline-flex" src="Images/selfie.png" alt="land_page" />
-      <h1 class="hello">Hello<br />World</h1>
-      <font class="d-lg-none info" color="whitesmoke" size="10rem"
-        >{Tap Here!}</font
+    <!--******************Landing*******************************-->
+    <div class="d-flex" onclick="tapScreen()">
+      <img
+        class="mob min-vh-100 animate__animated animate__fadeIn animate__slower"
+        id="mob"
+        src="Images/selfie.png"
+        alt="land_page"
+      />
+      <div class="w-100 container text-middle">
+        <a
+          class="hello animate__animated animate__fadeInDownBig"
+          id="hello1"
+          data-bs-toggle="modal"
+          data-bs-target="#aboutModal"
+          >Hello</a
+        >
+        <a
+          class="hello animate__animated animate__fadeInRight"
+          id="hello2"
+          data-bs-toggle="modal"
+          data-bs-target="#projectModal"
+        >
+          World
+        </a>
+        <a
+          class="hello animate__animated animate__fadeInUp"
+          id="hello3"
+          data-bs-toggle="modal"
+          data-bs-target="#contactModal"
+          style="color: azure"
+        >
+          {}
+        </a>
+      </div>
+      <font
+        class="info d-xxl-none animate__animated animate__pulse animate__infinite"
+        id="info"
+        color="whitesmoke"
+        size="15rem"
+        >{Tap Anywhere!}</font
       >
-    </div>
+      <!---------------------About-------------------------------------->
+      <div
+        class="modal fade modal-xl bg-black bg-gradient bg-opacity-100"
+        id="aboutModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-transparent">
+            <div class="modal-header">
+              <h1
+                class="modal-title text-light"
+                id="typeT"
+                style="font-size: 4rem"
+              >
+                Welcome to Netizen
+              </h1>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p
+                class="text-light type effect"
+                id="typeD"
+                style="font-size: 2rem"
+              >
+                I am Adrian, a Frontend Developer who loves creating awesome
+                user interfaces for awesome websites. I love creating cool
+                things for the web and I love experimenting with new Frontend
+                Tech. What can I do for you?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------Projects------------------------------------->
+      <div
+        class="modal fade modal-xl bg-black bg-gradient bg-opacity-100"
+        id="projectModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-transparent">
+            <div class="modal-header">
+              <h1 class="modal-title text-light" id="exampleModalLongTitle">
+                Projects
+              </h1>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body card-group m-auto">
+              <!--First card-->
+              <div class="card bg-black" style="min-width: 15rem">
+                <div class="card-body text-bg-warning m-3">
+                  <h5 class="card-title">Eugene</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Website</h6>
+                  <p class="card-text">
+                    This is the first Website that I ever built. For this
+                    Project I used HTML and SCSS. For the animations I've been
+                    using purely SCSS.
+                  </p>
+                  <button
+                    class="btn btn-outline-dark"
+                    onClick="parent.open('http://eugeneofficial.co.uk/')"
+                  >
+                    Go
+                  </button>
+                </div>
+              </div>
+              <!-- Second Card-->
+              <div class="card bg-black" style="min-width: 15rem">
+                <div class="card-body text-bg-danger m-3">
+                  <h5 class="card-title">Quiz</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Web App</h6>
+                  <p class="card-text">
+                    The Quiz application has been built with JavaScript using
+                    Objects, if/else statements and arrays.<br /><br /><br />
+                  </p>
+                  <button
+                    class="btn btn-outline-light"
+                    onClick="parent.open('https://adrianlucas88.github.io/Quiz/')"
+                  >
+                    Go
+                  </button>
+                </div>
+              </div>
+              <!-- Third Card-->
+              <div class="card bg-black" style="min-width: 15rem">
+                <div class="card-body text-bg-primary m-3">
+                  <h5 class="card-title">Tic Tac Toe</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Web App</h6>
+                  <p class="card-text">
+                    The Tic Tac Toe application has been built with JavaScript.
+                    For this application I've been using Objects, if/else
+                    statements and arrays.
+                  </p>
+                  <button
+                    class="btn btn-outline-light"
+                    onClick="parent.open('https://adrianlucas88.github.io/Tictactoe/')"
+                  >
+                    Go
+                  </button>
+                </div>
+              </div>
+              <!-- Fourth Card-->
+              <div class="card bg-black" style="min-width: 15rem">
+                <div class="card-body text-bg-light m-3">
+                  <h5 class="card-title">Netizen v1.0</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Website</h6>
+                  <p class="card-text">
+                    This Website has been built with HTML,CSS and PHP. The
+                    purpose of this Website was to showcase my portfolio.
+                  </p>
+                  <button
+                    class="btn btn-outline-danger"
+                    onClick="parent.open('http://adrianlucas88.github.io.netizen/')"
+                  >
+                    Go
+                  </button>
+                </div>
+              </div>
+              <!--Fifth card-->
+              <div class="card bg-black" style="min-width: 15rem">
+                <div class="card-body text-bg-warning m-3">
+                  <h5 class="card-title">Netizen v2.0</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Website</h6>
+                  <p class="card-text">
+                    This is the website that you are on now and is an upgrade of
+                    the first Website. For this Project I used HTML, Bootstrap,
+                    JavaScript and PHP.
+                  </p>
+                </div>
+              </div>
+              <!-- Sixth Card-->
+              <div class="card bg-black" style="min-width: 15rem">
+                <div class="card-body text-bg-danger m-3">
+                  <h5 class="card-title">Apple</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Clone Website</h6>
+                  <p class="card-text">
+                    Coming soon!<br /><br /><br /><br /><br />
+                  </p>
+                  <button class="btn btn-outline-light">Go</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!------------------------------Contact-->
+      <div
+        class="modal fade modal-xl bg-black bg-gradient bg-opacity-100"
+        id="contactModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content bg-transparent">
+            <div class="modal-header">
+              <h1 class="modal-title text-light" id="exampleModalLongTitle">
+                Contact Me!
+              </h1>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form action="mail.php" method="POST">
+              <div class="modal-body">
+                <div class="mb-3 text-light">
+                  <label for="Name" class="form-label">Your name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="John Smith"
+                    required
+                  />
 
+                  <label for="exampleFormControlInput1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    placeholder="name@example.com"
+                  />
+                </div>
+                <div class="mb-3 text-light">
+                  <label for="exampleFormControlTextarea1" class="form-label"
+                    >Your message</label
+                  >
+                  <textarea
+                    name="message"
+                    class="form-control"
+                    id="exampleFormControlTextarea1"
+                    rows="3"
+                  ></textarea>
+                  <button
+                    type="submit"
+                    value="Send"
+                    id="fcf-button"
+                    class="btn btn-outline-light mt-3"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./Js files/index.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
   </body>

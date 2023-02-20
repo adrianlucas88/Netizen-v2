@@ -8,37 +8,72 @@ heavy oj: #ff6701
 html {
   font-size: 16px;
   background: black;
+  overflow: hidden;
 }
 body {
   background-color: black;
   margin: 0;
   padding: 0;
-  overflow: 0;
 }
 .bck-container {
-  background: linear-gradient(
-    to top right,
-    black,
-    black,
-    black,
-    black,
-    rgb(59, 59, 59),
-    rgb(158, 158, 158)
-  );
+  background: black;
   height: 100vh;
 }
+a {
+  text-decoration-color: green;
+}
 .hello {
+  display: block;
+  text-decoration: none;
   font-size: 7rem;
   font-weight: 900;
-  font-family: monospace;
+  font-family: sans-serif;
   text-align: center;
-  padding-top: 20rem;
   color: #ff6701;
-  animation: jackInTheBox 1s;
-  --animate-repeat: 2;
   cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
-.info {
+.text-middle {
+  margin-top: 15rem;
+}
+
+.menu {
+  font-size: 7rem;
+  color: #ff0000;
+  font-weight: 900;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 2rem;
   text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.info {
+  position: absolute;
+  bottom: 5rem;
+  text-align: center;
+  font-size: small;
   width: 100vw;
+}
+
+@media only screen and (max-width: 1100px) {
+  .text-middle {
+    position: absolute;
+    margin-top: 22rem;
+  }
+  .menu {
+    font-size: 5rem;
+  }
+  .hello {
+    font-size: 5rem;
+  }
+  .mob {
+    margin-left: -5rem;
+  }
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.5;
 }
