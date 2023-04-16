@@ -41,4 +41,15 @@ The menu animation code begins by selecting three HTML elements using document.g
 
 The background animation code generates a specified number of div elements with the class ball and randomizes their position, color, size, and movement animation. The animation is created using the Web Animations API, which uses a keyframe animation with randomly generated duration, direction, and easing. The end result is a constantly moving and changing background of colorful balls.
 
-Overall, this code provides a fun and visually engaging experience for users on a web page.
+Overall, this code provides a fun and visually engaging experience for users on the web page.
+
+
+The PHP file handle the form submission. It first checks if the form has been submitted with an 'Email' variable using the isset() function. It then sets up the recipient email address and subject for the email.
+
+A function named problem() is defined that displays an error message if there are any errors with the form submission. The expected data such as 'Name', 'Email', and 'Message' are checked to see if they are set. If any of them are not set, the problem() function is called.
+
+The values of 'Name', 'Email', and 'Message' are assigned to variables. Then the variables are checked for any errors using regular expressions. If there are any errors, they are added to an error message string. If the length of the error message string is greater than zero, the problem() function is called.
+
+The clean_string() function is defined that replaces any bad strings with empty strings. The form data is then concatenated to create the email message body.
+
+Finally, the email headers are set up and the email is sent using the mail() function. If the email is sent successfully, a success message is displayed.
