@@ -50,7 +50,7 @@ a {
 
 .info {
   position: absolute;
-  bottom: 5rem;
+  bottom: 0.5rem;
   text-align: center;
   font-size: small;
   width: 100vw;
