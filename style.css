@@ -31,7 +31,6 @@ a {
   text-align: center;
   color: #ff6701;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
 }
 .text-middle {
   margin-top: 15rem;
